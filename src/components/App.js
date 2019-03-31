@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Navbar from './Navbar'
 import RecipeItem from './RecipeItem'
 import recipes from '../sample_data/recipes.json'
+import uniqueId from 'react-html-id'
 
 class App extends Component {
   constructor(props) {
@@ -11,6 +12,8 @@ class App extends Component {
     this.state = {
       searchString: ''
     };
+
+    uniqueId.enableUniqueIds(this)
   }
 
   render() { 
@@ -19,10 +22,18 @@ class App extends Component {
         <Navbar />
         <div className="container mt-10">
           <div className="row">
-            <RecipeItem />
-            <RecipeItem />
-            <RecipeItem />
-            <RecipeItem />
+            {
+              this.recipes.map((recipe, index) => {
+                return(
+                  <RecipeItem
+                    key = {this.getUniqueId(index.toString())}
+                    title = {recipe.title}
+                    ingredients = {recipe.ingredients}
+                    thumbnail = {recipe.thumbnail}
+                  />
+                );
+              })
+            }
           </div>
         </div>
       </div>
