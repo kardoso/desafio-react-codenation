@@ -14,22 +14,33 @@ class App extends Component {
     };
 
     uniqueId.enableUniqueIds(this)
+    this.updateSearch = this.updateSearch.bind(this)
+  }
+
+  updateSearch(e){
+    this.setState({
+      searchString: e.target.value
+    })
   }
 
   render() { 
     return (
       <div className="App">
-        <Navbar />
+        <Navbar update={this.updateSearch}/>
         <div className="container mt-10">
           <div className="row">
             {
-              this.recipes.map((recipe, index) => {
+              this.recipes.filter(
+                recipe => (
+                  recipe.title.toLowerCase().includes(this.state.searchString.toLowerCase())
+                  ||
+                  recipe.ingredients.toLowerCase().includes(this.state.searchString.toLowerCase())
+                )
+              ).map((searchedRecipe, index) => {
                 return(
                   <RecipeItem
+                    { ...searchedRecipe }
                     key = {this.getUniqueId(index.toString())}
-                    title = {recipe.title}
-                    ingredients = {recipe.ingredients}
-                    thumbnail = {recipe.thumbnail}
                   />
                 );
               })
