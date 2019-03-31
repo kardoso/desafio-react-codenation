@@ -1,8 +1,8 @@
 # Usando React para listar e filtrar receitas
-Neste desafio, voc? criar? uma interface para listar e filtrar receitas.
+Neste desafio, você criará uma interface para listar e filtrar receitas.
 
-## T?picos
-Com esse desafio, voc? aprender?:
+## Tópicos
+Com esse desafio, você aprenderá:
 
 - React
 - ES6
@@ -10,33 +10,33 @@ Com esse desafio, voc? aprender?:
 - Testes unitários
 
 ## Requisitos
-Voc? precisar? do Nodejs (LTS ou Current) instalado em sua m?quina.
+Você precisará do Nodejs (LTS ou Current) instalado em sua máquina.
 
 ## Detalhes
-Dentro da pasta `src`, voc? encontrar? a estrutura b?sica do projeto React. . Al?m disso, todos os arquivos necess?rios j? est?o criados assim como a estrutura em rela??oo a `HTML` e `CSS`. Sua miss?o neste desafio ser? criar a l?gica dos componentes para deix?-lo din?mico.
+Dentro da pasta `src`, você encontrará a estrutura básica do projeto React. . Além disso, todos os arquivos necessários já estão criados assim como a estrutura em relação a `HTML` e `CSS`. Sua missão neste desafio será criar a lógica dos componentes para deixá-lo dinâmico.
 
 
-Dentro da pasta `sample_data`, voc? ter? uma listagem de receitas que dever?o ser impressa na tela.
+Dentro da pasta `sample_data`, você terá uma listagem de receitas que deverão ser impressas na tela.
 
 ### Tarefas
 1. Renderizar dinamicamente o componente `RecipeItems` para todos os elementos dentro dos dados de amostra;
-2. Ao digitar um texto no `input` dentro do component `Navbar`, os `RecipeItems` dever?o ser filtrados, tanto pelo `title` quanto pelo `ingredients`;
-3. O filtro dever? ser `case insensitive`;
-4. (B?nus) fazer o highlight do texto pesquisado dentro do `title` e `ingredients` utilizando a tag `<mark>`.
+2. Ao digitar um texto no `input` dentro do component `Navbar`, os `RecipeItems` deverão ser filtrados, tanto pelo `title` quanto pelo `ingredients`;
+3. O filtro deverá ser `case insensitive`;
+4. (Bônus) fazer o highlight do texto pesquisado dentro do `title` e `ingredients` utilizando a tag `<mark>`.
 
 ### Exemplo
 ![](https://s3-us-west-1.amazonaws.com/codenation-challenges/react-0/BouncyAfraidDikkops-size_restricted.gif)
 
-### Aten??o
-- N?O MUDE o nome dos componentes, eles s?o utilizados para a realiza??o dos testes.
+### Atenção
+- NÃO MUDE o nome dos componentes, eles são utilizados para a realização dos testes.
 - O componente `App` deve utilizar o `state` chamado `searchString` para realizar o filtro de `RecipeItems`, garantindo assim o funcionamento adequado dos teste.
 
-## Rodando a aplica??o
-Na primeira execu??o rodar o comando:
+## Rodando a aplicação
+Na primeira execução rodar o comando:
 ```
 npm install
 ```
-Para rodar a aplica??o:
+Para rodar a aplicação:
 ```
 npm start
 ```
