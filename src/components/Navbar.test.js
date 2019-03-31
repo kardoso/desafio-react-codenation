@@ -3,9 +3,17 @@ import { mount } from 'enzyme';
 import Navbar from './Navbar';
 
 describe('Navbar', () => {
-    test('Should be App', () => {
-        const wrapper = mount(<Navbar />);
+    let wrapper
+
+    beforeEach(() => {
+        wrapper = mount(<Navbar />)
+    })
+    test('Should be Navbar', () => {
         expect(wrapper.is('Navbar')).toBeTruthy();
+    })
+
+    test('Should have a input field', () => {
+        expect(wrapper.find('input').length).toBe(1)
     })
 
     // Add more tests here
