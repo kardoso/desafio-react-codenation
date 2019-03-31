@@ -41,6 +41,7 @@ class App extends Component {
                   <RecipeItem
                     { ...searchedRecipe }
                     key = {this.getUniqueId(index.toString())}
+                    searchedText = {this.state.searchString}
                   />
                 );
               })
